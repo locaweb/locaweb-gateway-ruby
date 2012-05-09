@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Locaweb::Gateway::VERSION
   s.authors     = ["Locaweb - Saas"]
   s.email       = ["atendimento@locaweb.com.br"]
-  s.homepage    = "http://github.com/locaweb/locaweb-gateway"
+  s.homepage    = "http://github.com/locaweb/locaweb-gateway-ruby"
   s.summary     = %q{Locaweb Payment Gateway Gem}
   s.description = %q{This gem was designed to help you to access the locaweb payment gateway.}
 
