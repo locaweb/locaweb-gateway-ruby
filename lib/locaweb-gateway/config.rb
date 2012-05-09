@@ -22,9 +22,9 @@ module Locaweb
       #
       def self.base_uri
         if environment.equal?(:production)
-          'https://api.gplw.com.br/v1/transacao'
+          'https://api.gatewaylocaweb.com.br/v1/transacao'
         else
-          'https://api-sandbox.gplw.com.br/v1/transacao'
+          'https://api-sandbox.gatewaylocaweb.com.br/v1/transacao'
         end
       end
 

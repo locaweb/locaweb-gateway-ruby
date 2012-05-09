@@ -15,8 +15,8 @@ module Locaweb
         subject { Request.new(:action => '/foo') }
 
         it "should join the base endpoint with the requested action" do
-          subject.stub(:base_uri).and_return('https://api.gplw.com.br/v1/transacao')
-          subject.request_uri.should == 'https://api.gplw.com.br/v1/transacao/foo'
+          subject.stub(:base_uri).and_return('https://api.gatewaylocaweb.com.br/v1/transacao')
+          subject.request_uri.should == 'https://api.gatewaylocaweb.com.br/v1/transacao/foo'
         end
       end
 

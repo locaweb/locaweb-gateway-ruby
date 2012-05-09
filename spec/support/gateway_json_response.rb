@@ -17,7 +17,7 @@ module GatewayJSONResponse
       "transacao" => {
         "id" => "152",
         "status" => "pago",
-        "url_acesso" => "http://api.gplw.com.br/v1/transacao/foobar",
+        "url_acesso" => "http://api.gatewaylocaweb.com.br/v1/transacao/foobar",
         "meio_pagamento" => "cielo",
         "numero_pedido" => "876",
         "erro" => nil,

@@ -34,7 +34,7 @@ module Locaweb
             transaction = subject.parse
             transaction.id.should == '152'
             transaction.status.should == 'pago'
-            transaction.url_acesso.should == 'http://api.gplw.com.br/v1/transacao/foobar'
+            transaction.url_acesso.should == 'http://api.gatewaylocaweb.com.br/v1/transacao/foobar'
             transaction.meio_pagamento.should == 'cielo'
             transaction.numero_pedido.should == '876'
             transaction.detalhes.should == { "tid" => "10017", "nsu" => "998877", "pan" => "887766", "arp" => "776655", "lr"  => nil }

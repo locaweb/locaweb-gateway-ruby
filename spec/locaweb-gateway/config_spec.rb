@@ -18,12 +18,12 @@ module Locaweb
       describe ".base_uri" do
         it "should return the production base uri" do
           Config.stub(:environment).and_return(:production)
-          Config.base_uri.should == 'https://api.gplw.com.br/v1/transacao'
+          Config.base_uri.should == 'https://api.gatewaylocaweb.com.br/v1/transacao'
         end
 
         it "should return the sandbox base uri" do
           Config.stub(:environment).and_return(:sandbox)
-          Config.base_uri.should == 'https://api-sandbox.gplw.com.br/v1/transacao'
+          Config.base_uri.should == 'https://api-sandbox.gatewaylocaweb.com.br/v1/transacao'
         end
       end
     end
