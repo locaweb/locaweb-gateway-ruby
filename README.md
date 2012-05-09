@@ -46,4 +46,4 @@
 
 ## Docs
 
-[Documentação do Gateway de Pagamentos Locaweb](http://docs.locawebgateway.com.br)
+[Documentação do Gateway de Pagamentos Locaweb](http://docs.gatewaylocaweb.com.br)
