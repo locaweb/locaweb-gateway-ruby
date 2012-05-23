@@ -24,7 +24,6 @@ A Transação é a entidade básica do gateway e representa a transação em que
 ```ruby
 transacao = Locaweb::Gateway.criar(
   :url_retorno => 'http://foo.com/url_retorno',
-  :url_erro => 'http://bar.com',
   :capturar => true,
   :pedido => {
     :numero => "989012",
@@ -35,11 +34,11 @@ transacao = Locaweb::Gateway.criar(
   :pagamento => {
     :meio_pagamento => :cielo,
     :bandeira => :visa,
-    :numero_cartao => "4012001037141112",
-    :cartao_codigo_verificacao => "973",
+    :cartao_numero => "4012001037141112",
+    :cartao_cvv => "973",
+    :cartao_validade => "082015",
     :parcelas => "1",
-    :tipo_operacao => "credito_a_vista",
-    :vencimento_cartao => "082015"
+    :tipo_operacao => "credito_a_vista"
   },
   :comprador => {
     :nome => "Bruna da Silva",
