@@ -21,6 +21,12 @@ module Locaweb
         end
       end
 
+      describe ".logger" do
+        it "should have an fake logger by default" do
+          Config.logger.should be_instance_of(NullLogger)
+        end
+      end
+
       describe ".base_uri" do
         it "should return the uri if is present" do
           Config.stub(:uri).and_return("https://api-lw.gatewaylocaweb.com.br")

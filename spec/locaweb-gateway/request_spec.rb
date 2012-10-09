@@ -28,7 +28,7 @@ module Locaweb
 
       describe "#post" do
         it "should pass post to the base endpoint and return the response" do
-          subject.engine.should_receive(:post).with(subject.request_uri, "{\"foo\":\"bar\"}").and_return(invalid_credentials)
+          subject.engine.should_receive(:post).with(subject.request_uri, "{\"foo\":\"bar\"}").and_return(ResponseFixture.new(:body => invalid_credentials, :status => 403))
           subject.post(:foo => :bar)
         end
 
@@ -40,7 +40,7 @@ module Locaweb
 
       describe "#get" do
         it "should pass the get to the engine and return an response" do
-          subject.engine.should_receive(:get).with(subject.request_uri, { :params => { :foo => :bar }}).and_return(invalid_credentials)
+          subject.engine.should_receive(:get).with(subject.request_uri, { :params => { :foo => :bar }}).and_return(ResponseFixture.new(:body => invalid_credentials, :status => 403))
           subject.get(:foo => :bar)
         end
 
