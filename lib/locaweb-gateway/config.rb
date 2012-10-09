@@ -12,6 +12,11 @@ module Locaweb
       cattr_accessor :environment
       self.environment = :production
 
+      # If you overwrite the base_uri, just assign in config an diferent URI.
+      #
+      cattr_accessor :uri
+      self.uri = ''
+
       # TODO: put ssl and the request object should read from this.
       #
       # cattr_accessor :ssl, :ssl_client_cert, :ssl_client_key, :ssl_ca_file
@@ -19,8 +24,11 @@ module Locaweb
       #
 
       # Returns the base endpoint for the Locaweb Payment Gateway.
+      # You can overwrite passing in the uri accessor.
       #
       def self.base_uri
+        return uri if uri.present?
+
         if environment.equal?(:production)
           'https://api.gatewaylocaweb.com.br/v1/transacao'
         else

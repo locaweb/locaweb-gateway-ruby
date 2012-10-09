@@ -15,7 +15,18 @@ module Locaweb
         end
       end
 
+      describe ".uri" do
+        it "should be possible to have an acessor to overwrite" do
+          Config.uri.should be_empty
+        end
+      end
+
       describe ".base_uri" do
+        it "should return the uri if is present" do
+          Config.stub(:uri).and_return("https://api-lw.gatewaylocaweb.com.br")
+          Config.base_uri.should == "https://api-lw.gatewaylocaweb.com.br"
+        end
+
         it "should return the production base uri" do
           Config.stub(:environment).and_return(:production)
           Config.base_uri.should == 'https://api.gatewaylocaweb.com.br/v1/transacao'
