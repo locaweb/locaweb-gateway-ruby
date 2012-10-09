@@ -24,11 +24,19 @@ module Locaweb
       private
 
       def http_request(options={})
+        logger.info("Sending to Gateway API. URI: #{request_uri}.\nRequest Params: #{options[:params]}")
         response = begin
           engine.send(options[:method], request_uri, options[:params])
         rescue RestClient::Exception => bad_request
           OpenStruct.new(:body => bad_request.http_body, :to_i => bad_request.http_code)
         end
+        logger.info("Response Status: #{response.to_i}. Response Body: #{response.body.to_s}")
+
+        response
+      end
+
+      def logger
+        ::Locaweb::Gateway::Config.logger
       end
     end
   end
