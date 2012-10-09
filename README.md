@@ -12,8 +12,9 @@ Para se autenticar e passar o ambiente:
 ```ruby
    require 'locaweb-gateway'
    Locaweb::Gateway.configure do |config|
-     config.token = '3a5bbed0-50d4-012f-8d73-0026bb5a6240'
+     config.token       = '3a5bbed0-50d4-012f-8d73-0026bb5a6240'
      config.environment = 'sandbox' # se não for passado irá utilizar production por default.
+     config.logger      = Rails.logger # se não for passado nenhum logger, simplesmente não irá logar nada.
    end
 ```
 
