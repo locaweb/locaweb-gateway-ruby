@@ -16,7 +16,7 @@ Para se autenticar, configurar o token e informar o ambiente, copie o modelo a s
    require 'locaweb-gateway'
    Locaweb::Gateway.configure do |config|
      config.token       = '3a5bbed0-50d4-012f-8d73-0026bb5a6240'
-     config.environment = 'sandbox' # Se não for informado, o ambiente "production" é o default e será utilizado
+     config.environment = :sandbox # Se não for informado, o ambiente :production é o default e será utilizado
      config.logger      = Rails.logger # Se nenhum logger for informado, nada será logado
    end
 ```
